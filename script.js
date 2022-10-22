@@ -3,11 +3,19 @@ function CalculateBMI()
     let height = document.getElementById("height").value/100;
     let weight = document.getElementById("weight").value;
     
+    var Result  = document.getElementById("result");
+
+    if(weight<0 || height<0)
+    {
+        Result.innerHTML = "Weight should be Positive !!";
+        Result.style.color = "red";
+        return false;
+    }
     let BMI = weight/(height*height);
 
 
  
-    var Result  = document.getElementById("result");
+    
 
     if(BMI < 18.5)
     {
